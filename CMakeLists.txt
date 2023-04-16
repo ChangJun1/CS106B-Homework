@@ -16,9 +16,14 @@ find_package(Threads REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 add_executable(OnlyConnect Assignment1/OnlyConnect.cpp)
+add_executable(PlayingFair Assignment1/PlayingFair.cpp)
 
 target_link_libraries(OnlyConnect ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(PlayingFair ${GTEST_BOTH_LIBRARIES})
+
 
 target_link_libraries(OnlyConnect ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(PlayingFair ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(OnlyConnectTest OnlyConnect)
+add_test(PlayingFairTest PlayingFair)
